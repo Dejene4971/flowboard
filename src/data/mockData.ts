@@ -67,6 +67,8 @@ export const activities: Activity[] = [
   { id: 'a6', type: 'task_completed', userId: 'u4', taskId: 't9', projectId: 'p2', details: 'Completed "Set up React Native project"', timestamp: '2025-03-05T15:00:00Z' },
   { id: 'a7', type: 'task_completed', userId: 'u3', taskId: 't13', projectId: 'p3', details: 'Completed "Rate limiting middleware"', timestamp: '2025-07-20T16:00:00Z' },
   { id: 'a8', type: 'task_moved', userId: 'u1', taskId: 't5', projectId: 'p1', details: 'Moved "Write E2E tests for login" to Review', timestamp: '2025-08-09T16:00:00Z' },
+  { id: 'a9', type: 'task_created', userId: 'u2', taskId: 't16', projectId: 'p1', details: 'Created "Add error boundary component"', timestamp: '2025-08-10T12:00:00Z' },
+  { id: 'a10', type: 'task_completed', userId: 'u3', taskId: 't17', projectId: 'p2', details: 'Completed "Fix image upload on mobile"', timestamp: '2025-08-11T09:00:00Z' },
 ];
 
 export const comments: Comment[] = [
