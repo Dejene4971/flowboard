@@ -1,0 +1,26 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { AppProvider } from './context/AppContext';
+import { Layout } from './components/Layout';
+import { Dashboard } from './pages/Dashboard';
+import { Projects } from './pages/Projects';
+import { Board } from './pages/Board';
+import { Settings } from './pages/Settings';
+
+function App() {
+  return (
+    <AppProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/board" element={<Board />} />
+            <Route path="/settings" element={<Settings />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </AppProvider>
+  );
+}
+
+export default App;
