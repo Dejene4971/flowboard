@@ -6,6 +6,7 @@ export const users: User[] = [
   { id: 'u3', name: 'Carol Martinez', email: 'carol@flowboard.dev', avatar: 'CM' },
   { id: 'u4', name: 'David Kim', email: 'david@flowboard.dev', avatar: 'DK' },
   { id: 'u5', name: 'Eva Johnson', email: 'eva@flowboard.dev', avatar: 'EJ' },
+  { id: 'u6', name: 'Frank Lee', email: 'frank@flowboard.dev', avatar: 'FL' },
 ];
 
 export const projects: Project[] = [
