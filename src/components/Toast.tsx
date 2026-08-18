@@ -13,7 +13,7 @@ export function Toast({ message, type = 'info', duration = 5000, onDismiss }: To
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
-      setTimeout(onDismiss, 300);
+      onDismiss();
     }, duration);
 
     return () => clearTimeout(timer);
@@ -38,7 +38,7 @@ export function Toast({ message, type = 'info', duration = 5000, onDismiss }: To
         className="toast-close"
         onClick={() => {
           setIsVisible(false);
-          setTimeout(onDismiss, 300);
+          onDismiss();
         }}
         aria-label="Dismiss notification"
       >

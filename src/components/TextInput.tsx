@@ -17,13 +17,15 @@ export function TextInput({
   error,
   required,
 }: TextInputProps) {
+  const inputId = `input-${label.toLowerCase().replace(/\s+/g, '-')}`;
   return (
     <div className={`text-input-wrapper ${error ? 'text-input-wrapper--error' : ''}`}>
-      <label className="text-input-label">
+      <label htmlFor={inputId} className="text-input-label">
         {label}
         {required && <span className="required" aria-hidden="true">*</span>}
       </label>
       <input
+        id={inputId}
         type={type}
         className="text-input"
         value={value}

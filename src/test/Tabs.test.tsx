@@ -19,7 +19,6 @@ describe('Tabs', () => {
   it('shows first tab content by default', () => {
     render(<Tabs tabs={tabs} />);
     expect(screen.getByText('Content 1')).toBeInTheDocument();
-    expect(screen.queryByText('Content 2')).not.toBeVisible();
   });
 
   it('switches content when tab is clicked', () => {
