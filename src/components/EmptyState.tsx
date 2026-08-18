@@ -10,13 +10,13 @@ interface EmptyStateProps {
 
 export function EmptyState({ title, description, icon = '📋', action }: EmptyStateProps) {
   return (
-    <div className="empty-state" role="status">
+    <div className="empty-state" role="status" aria-label={title}>
       <span className="empty-state-icon" aria-hidden="true">{icon}</span>
       <h3 className="empty-state-title">{title}</h3>
       <p className="empty-state-description">{description}</p>
       {action && (
         <button
-          className="empty-state-action"
+          className="btn btn--primary empty-state-action"
           onClick={action.onClick}
         >
           {action.label}
