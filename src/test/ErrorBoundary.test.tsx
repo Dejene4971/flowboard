@@ -4,6 +4,7 @@ import { ErrorBoundary } from '../components/ErrorBoundary';
 
 function ThrowingComponent() {
   throw new Error('Test error');
+  return null;
 }
 
 function GoodComponent() {

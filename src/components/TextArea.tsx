@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 interface TextAreaProps {
   value: string;
   onChange: (value: string) => void;
@@ -19,8 +17,6 @@ export function TextArea({
   rows = 4,
   error,
 }: TextAreaProps) {
-  const [isFocused, setIsFocused] = useState(false);
-
   return (
     <div className={`textarea-wrapper ${error ? 'textarea-wrapper--error' : ''}`}>
       <label className="textarea-label">{label}</label>
@@ -31,8 +27,7 @@ export function TextArea({
         placeholder={placeholder}
         maxLength={maxLength}
         rows={rows}
-        onFocus={() => setIsFocused(true)}
-        onBlur={() => setIsFocused(false)}
+
         aria-invalid={!!error}
         aria-describedby={error ? 'textarea-error' : undefined}
       />

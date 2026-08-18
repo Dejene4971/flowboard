@@ -8,14 +8,16 @@ interface TooltipProps {
 
 export function Tooltip({ content, children, position = 'top' }: TooltipProps) {
   const [isVisible, setIsVisible] = useState(false);
-  const timeoutRef = useRef<number>();
+  const timeoutRef = useRef<number | null>(null);
 
   const show = () => {
     timeoutRef.current = window.setTimeout(() => setIsVisible(true), 400);
   };
 
   const hide = () => {
-    window.clearTimeout(timeoutRef.current);
+    if (timeoutRef.current !== null) {
+      window.clearTimeout(timeoutRef.current);
+    }
     setIsVisible(false);
   };
 
